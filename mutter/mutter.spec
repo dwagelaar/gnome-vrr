@@ -8,7 +8,7 @@
 %global colord_version 1.4.5
 %global mutter_api_version 11
 
-%global gnome_version 43.3
+%global gnome_version 43.6
 %global tarball_version %%(echo %{gnome_version} | tr '~' '.')
 
 Name:          mutter
@@ -29,11 +29,8 @@ Patch1:        0001-Revert-build-Do-not-provide-built-sources-as-libmutt.patch
 # https://bugzilla.redhat.com/show_bug.cgi?id=1936991
 Patch2:        mutter-42.alpha-disable-tegra.patch
 
-# https://gitlab.gnome.org/GNOME/mutter/-/merge_requests/2841
-Patch3:        0001-x11-Avoid-updating-focus-on-wayland-compositor.patch
-
 # https://gitlab.gnome.org/GNOME/mutter/-/merge_requests/1154
-Patch4:        vrr.patch
+Patch3:        vrr.patch
 
 BuildRequires: pkgconfig(gobject-introspection-1.0) >= 1.41.0
 BuildRequires: pkgconfig(sm)
@@ -180,6 +177,30 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/%{name}.desktop
 %{_datadir}/mutter-%{mutter_api_version}/tests
 
 %changelog
+* Sat Jun 03 2023 Florian Müllner <fmuellner@gnome.org> - 43.6-1
+- Update to 43.6
+
+* Tue Apr 25 2023 Florian Müllner <fmuellner@gnome.org> - 43.5-1
+- Update to 43.5
+
+* Mon Mar 20 2023 Florian Müllner <fmuellner@redhat.com> - 43.4-1
+- Update to 43.4
+
+* Wed Feb 15 2023 Florian Müllner <fmuellner@redhat.com> - 43.3-2
+- Fix focus regression in 43.3
+
+* Tue Feb 14 2023 Florian Müllner <fmuellner@redhat.com> - 43.3-1
+- Update to 43.3
+
+* Wed Feb 01 2023 Jonas Ådahl <jadahl@redhat.com> - 43.2-2
+- Backport patches on the gnome-43 branch
+
+* Wed Dec 07 2022 Florian Müllner <fmuellner@redhat.com> - 43.2-1
+- Update to 43.2
+
+* Thu Nov 17 2022 Jonas Ådahl <jadahl@redhat.com> - 43.1-2
+- Backport regression fixes
+
 * Tue Nov 08 2022 Kyle Gospodnetich <me@kylegospodneti.ch> - 43.1.vrr.10-1
 - Add Dor Askayo's VRR MR
 
