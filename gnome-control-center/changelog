@@ -1,3 +1,92 @@
+* Sat Jun 03 2023 Kalev Lember <klember@redhat.com> - 43.6-1
+- Update to 43.6
+
+* Wed Mar 29 2023 David King <amigadave@amigadave.com> - 43.5-1
+- Update to 43.5
+
+* Thu Mar 16 2023 David King <amigadave@amigadave.com> - 43.4.1-1
+- Update to 43.4.1
+
+* Fri Dec 30 2022 David King <amigadave@amigadave.com> - 43.2-1
+- Update to 43.2
+
+* Thu Oct 27 2022 David King <amigadave@amigadave.com> - 43.1-1
+- Update to 43.1
+
+* Fri Oct 21 2022 Adam Williamson <awilliam@redhat.com> - 43.0-2
+- Backport MR #1478 to fix crash on empty EAP password edit (#2136471)
+
+* Mon Sep 19 2022 Kalev Lember <klember@redhat.com> - 43.0-1
+- Update to 43.0
+
+* Tue Sep 06 2022 Kalev Lember <klember@redhat.com> - 43~rc-1
+- Update to 43.rc
+
+* Tue Aug 30 2022 Adam Williamson <awilliam@redhat.com> - 43~beta-2
+- Backport MRs #1439 and #1440 to fix unapplied settings (#2118152)
+
+* Fri Aug 12 2022 Kalev Lember <klember@redhat.com> - 43~beta-1
+- Update to 43.beta
+
+* Thu Jul 28 2022 Kalev Lember <klember@redhat.com> - 43~alpha-1
+- Update to 43.alpha
+- Drop upstreamed distro-logo.patch
+- Drop upstreamed timezone-map.patch
+
+* Thu Jul 21 2022 Fedora Release Engineering <releng@fedoraproject.org> - 42.3-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_37_Mass_Rebuild
+
+* Wed Jul 20 2022 Kalev Lember <klember@redhat.com> - 42.3-2
+- Rebuilt for libgnome-desktop soname bump
+
+* Wed Jul 06 2022 David King <amigadave@amigadave.com> - 42.3-1
+- Update to 42.3
+
+* Wed Jun 29 2022 Michael Catanzaro <mcatanzaro@redhat.com> - 42.2-2
+- Update timezone map
+
+* Fri May 27 2022 David King <amigadave@amigadave.com> - 42.2-1
+- Update to 42.2
+
+* Wed May 04 2022 Felipe Borges <felipeborges@gnome.org> - 42.1-3
+- Recommend "malcontent-control" instead of requiring it
+
+* Tue May 03 2022 David King <amigadave@amigadave.com> - 42.1-2
+- Fix freeze in wired connection properties
+
+* Wed Apr 27 2022 David King <amigadave@amigadave.com> - 42.1-1
+- Update to 42.1
+
+* Tue Apr 19 2022 Michael Catanzaro <mcatanzaro@redhat.com> - 42.0-4
+- Add patch to fix switches in online accounts panel
+
+* Wed Apr 06 2022 Felipe Borges <felipeborges@gnome.org> - 42.0-3
+- Fix printer setting preventing from scrolling media size list
+
+* Wed Mar 30 2022 Adam Williamson <awilliam@redhat.com> - 42.0-2
+- Backport MR #1272 to fix GOA helper window (#2064462)
+
+* Fri Mar 18 2022 David King <amigadave@amigadave.com> - 42.0-1
+- Udpate to 42.0
+
+* Wed Mar 16 2022 Bastien Nocera <hadess@hadess.net> - 42~rc-2
+- Add patch to prettify info strings
+
+* Tue Mar 08 2022 David King <amigadave@amigadave.com> - 42~rc-1
+- Update to 42.rc
+
+* Thu Mar 03 2022 David King <amigadave@amigadave.com> - 42~beta-9
+- Revert "Use SVG version of Fedora logos"
+
+* Thu Mar 03 2022 David King <amigadave@amigadave.com> - 42~beta-8
+- Refresh resources dependency patch from upstream
+
+* Wed Mar 02 2022 Elliott Sales de Andrade <quantum.analyst@gmail.com> - 42~beta-7
+- Use SVG version of Fedora logos
+
+* Wed Feb 23 2022 Michael Catanzaro <mcatanzaro@redhat.com> - 42~beta-6
+- Properly use %%autorelease
+
 * Tue Jun 07 2022 Kyle Gospodnetich <me@kylegospodneti.ch> - 42.2.vrr-1
 - Add Dor Askayo's VRR patches
 
