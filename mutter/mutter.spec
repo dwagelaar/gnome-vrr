@@ -8,7 +8,7 @@
 %global colord_version 1.4.5
 %global mutter_api_version 11
 
-%global gnome_version 43.7
+%global gnome_version 43.8
 %global tarball_version %%(echo %{gnome_version} | tr '~' '.')
 
 Name:          mutter
@@ -97,6 +97,9 @@ Requires: startup-notification
 Requires: dbus
 Requires: zenity
 
+# Need common
+Requires: %{name}-common = %{version}-%{release}
+
 Recommends: mesa-dri-drivers%{?_isa}
 
 Provides: firstboot(windowmanager) = mutter
@@ -105,6 +108,8 @@ Provides: firstboot(windowmanager) = mutter
 # significantly since then.
 Provides: bundled(cogl) = 1.22.0
 Provides: bundled(clutter) = 1.26.0
+
+Conflicts: mutter < 43.7-2
 
 %description
 Mutter is a window and compositing manager that displays and manages
@@ -117,6 +122,14 @@ used as the display core of a larger system such as GNOME Shell. For
 this reason, Mutter is very extensible via plugins, which are used both
 to add fancy visual effects and to rework the window management
 behaviors to meet the needs of the environment.
+
+%package common
+Summary: Common files used by %{name} and forks of %{name}
+BuildArch: noarch
+Conflicts: mutter < 43.7-2
+
+%description common
+Common files used by Mutter and soft forks of Mutter
 
 %package devel
 Summary: Development package for %{name}
@@ -159,11 +172,13 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/%{name}.desktop
 %{_libdir}/lib*.so.*
 %{_libdir}/mutter-%{mutter_api_version}/
 %{_libexecdir}/mutter-restart-helper
+%{_mandir}/man1/mutter.1*
+
+%files common
 %{_datadir}/GConf/gsettings/mutter-schemas.convert
 %{_datadir}/glib-2.0/schemas/org.gnome.mutter.gschema.xml
 %{_datadir}/glib-2.0/schemas/org.gnome.mutter.wayland.gschema.xml
 %{_datadir}/gnome-control-center/keybindings/50-mutter-*.xml
-%{_mandir}/man1/mutter.1*
 %{_udevrulesdir}/61-mutter.rules
 
 %files devel
@@ -177,6 +192,16 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/%{name}.desktop
 %{_datadir}/mutter-%{mutter_api_version}/tests
 
 %changelog
+* Wed Aug 23 2023 Florian Müllner <fmuellner@gnome.org> - 43.8-1
+- Update to 43.8
+
+* Tue Aug 15 2023 Joshua Strobl <me@joshuastrobl.com> - 43.7-2
+- Split common files into mutter-common for consumption by soft forks of
+  Mutter such as Budgie Desktop's Magpie v0.x
+
+* Thu Jul 06 2023 Florian Müllner <fmuellner@gnome.org> - 43.7-1
+- Update to 43.7
+
 * Sat Jun 03 2023 Florian Müllner <fmuellner@gnome.org> - 43.6-1
 - Update to 43.6
 
