@@ -10,7 +10,7 @@
 %global mutter_api_version 12
 
 %global gnome_major_version 44
-%global gnome_version %{gnome_major_version}.6
+%global gnome_version %{gnome_major_version}.8
 %global tarball_version %%(echo %{gnome_version} | tr '~' '.')
 
 Name:          mutter
