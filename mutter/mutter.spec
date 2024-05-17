@@ -33,15 +33,27 @@ Patch1:        mutter-42.alpha-disable-tegra.patch
 # https://pagure.io/fedora-workstation/issue/79
 Patch2:        0001-place-Always-center-initial-setup-fedora-welcome.patch
 
+# https://bugzilla.redhat.com/show_bug.cgi?id=2239128
+# https://gitlab.gnome.org/GNOME/mutter/-/issues/3068
+# not upstreamed because for upstream we'd really want to find a way
+# to fix *both* problems
+Patch3:         0001-Revert-x11-Use-input-region-from-frame-window-for-de.patch
+
+# https://gitlab.gnome.org/GNOME/mutter/-/merge_requests/3329
+# Modified to add the change from
+# https://gitlab.gnome.org/GNOME/mutter/-/merge_requests/3329#note_1874837
+# which solves the problems reported with #3329 alone
+Patch4: 0001-modified-3329.patch
+
 # https://gitlab.gnome.org/GNOME/mutter/-/merge_requests/3300/
-# Patch3:        3300.patch
+# Patch5:        3300.patch
 
 # https://gitlab.gnome.org/GNOME/mutter/-/merge_requests/1154
-Patch4:        vrr.patch
-Patch5:        enable-vrr-setting.patch
+Patch6:        vrr.patch
+Patch7:        enable-vrr-setting.patch
 
 # https://gitlab.gnome.org/GNOME/mutter/-/merge_requests/3304
-# Patch6:        3304.patch
+# Patch8:        3304.patch
 
 BuildRequires: pkgconfig(gobject-introspection-1.0) >= 1.41.0
 BuildRequires: pkgconfig(sm)
