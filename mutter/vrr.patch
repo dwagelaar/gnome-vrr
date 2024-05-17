@@ -1906,7 +1906,7 @@ index d89ca1e8c..79579b096 100644
 +                       "output", output,
                         "refresh-rate", mode_info->refresh_rate,
                         "framebuffer", COGL_FRAMEBUFFER (fake_onscreen),
-                        "offscreen", COGL_FRAMEBUFFER (offscreen),
+                        "transform", META_MONITOR_TRANSFORM_NORMAL,
 -- 
 2.41.0
 
